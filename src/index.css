@@ -28,8 +28,11 @@ body {
   line-height: 1.6;
 }
 
-.gradient-bg {
+/* .gradient-bg {
   background: linear-gradient(135deg, #F97316 0%, #FCD34D 100%);
+} */
+.gradient-bg {
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 70%, #ffffff 100%);
 }
 
 .glass-effect {
@@ -63,6 +66,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

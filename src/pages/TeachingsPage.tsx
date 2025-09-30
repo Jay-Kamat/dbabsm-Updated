@@ -35,7 +35,7 @@ const TeachingsPage: React.FC = () => {
   const filteredTeachings = teachings.filter(teaching => {
     const matchesAuthor = selectedAuthor === 'all' || teaching.author === selectedAuthor;
     const matchesCategory = selectedCategory === 'all' || teaching.category === selectedCategory;
-    const matchesSearch = searchTerm === '' || 
+    const matchesSearch = searchTerm === '' ||
       (language === 'mr' ? teaching.titleMarathi : teaching.title)
         .toLowerCase().includes(searchTerm.toLowerCase());
     return matchesAuthor && matchesCategory && matchesSearch;
@@ -43,7 +43,7 @@ const TeachingsPage: React.FC = () => {
 
   const filteredResources = digitalResources.filter(resource => {
     const matchesType = selectedResourceType === 'all' || resource.type === selectedResourceType;
-    const matchesSearch = searchTerm === '' || 
+    const matchesSearch = searchTerm === '' ||
       (language === 'mr' ? resource.titleMarathi : resource.title)
         .toLowerCase().includes(searchTerm.toLowerCase());
     return matchesType && matchesSearch;
@@ -75,7 +75,7 @@ const TeachingsPage: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">{t('teachingsTitle')}</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'बुद्ध आणि डॉ. बाबासाहेब आंबेडकरांचे जीवन आणि शिकवणी. डिजिटल पुस्तके, लेख आणि व्हिडिओ.'
               : 'Life and teachings of Buddha and Dr. Babasaheb Ambedkar. Digital books, articles, and videos.'
             }
@@ -90,21 +90,19 @@ const TeachingsPage: React.FC = () => {
             <div className="bg-white rounded-lg p-1 shadow-lg">
               <button
                 onClick={() => setActiveTab('teachings')}
-                className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                  activeTab === 'teachings'
-                    ? 'bg-orange-500 text-white'
+                className={`px-6 py-3 rounded-lg font-medium transition-colors ${activeTab === 'teachings'
+                    ? 'bg-blue-600 text-white'
                     : 'text-gray-700 hover:text-orange-600'
-                }`}
+                  }`}
               >
                 {t('buddhaTeachings')}
               </button>
               <button
                 onClick={() => setActiveTab('resources')}
-                className={`px-6 py-3 rounded-lg font-medium transition-colors ${
-                  activeTab === 'resources'
-                    ? 'bg-orange-500 text-white'
+                className={`px-6 py-3 rounded-lg font-medium transition-colors ${activeTab === 'resources'
+                    ? 'bg-blue-600 text-white'
                     : 'text-gray-700 hover:text-orange-600'
-                }`}
+                  }`}
               >
                 {t('digitalResources')}
               </button>
@@ -128,7 +126,7 @@ const TeachingsPage: React.FC = () => {
             {/* Filters */}
             <div className="flex items-center space-x-4">
               <Filter className="w-5 h-5 text-gray-600" />
-              
+
               {activeTab === 'teachings' ? (
                 <>
                   <select
@@ -142,7 +140,7 @@ const TeachingsPage: React.FC = () => {
                       </option>
                     ))}
                   </select>
-                  
+
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
@@ -185,29 +183,28 @@ const TeachingsPage: React.FC = () => {
                     <div className="flex items-center space-x-2">
                       <User className="w-5 h-5 text-orange-500" />
                       <span className="text-sm font-medium text-orange-600">
-                        {teaching.author === 'Buddha' ? 
-                          (language === 'mr' ? 'बुद्ध' : 'Buddha') : 
+                        {teaching.author === 'Buddha' ?
+                          (language === 'mr' ? 'बुद्ध' : 'Buddha') :
                           (language === 'mr' ? 'डॉ. आंबेडकर' : 'Dr. Ambedkar')
                         }
                       </span>
                     </div>
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                      teaching.category === 'teaching' ? 'bg-blue-100 text-blue-800' :
-                      teaching.category === 'principle' ? 'bg-green-100 text-green-800' :
-                      'bg-purple-100 text-purple-800'
-                    }`}>
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${teaching.category === 'teaching' ? 'bg-blue-100 text-blue-800' :
+                        teaching.category === 'principle' ? 'bg-green-100 text-green-800' :
+                          'bg-purple-100 text-purple-800'
+                      }`}>
                       {teachingCategories.find(cat => cat.id === teaching.category)?.name}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-gray-800 mb-3">
                     {language === 'mr' ? teaching.titleMarathi : teaching.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 mb-4 leading-relaxed">
                     {language === 'mr' ? teaching.contentMarathi : teaching.content}
                   </p>
-                  
+
                   {teaching.source && (
                     <div className="text-sm text-gray-500 italic">
                       {language === 'mr' ? 'स्रोत:' : 'Source:'} {teaching.source}
@@ -237,37 +234,37 @@ const TeachingsPage: React.FC = () => {
                     </div>
                     <div className="absolute top-4 right-4">
                       <span className="bg-black bg-opacity-50 text-white px-2 py-1 rounded text-xs">
-                        {resource.language === 'both' ? 
+                        {resource.language === 'both' ?
                           (language === 'mr' ? 'द्विभाषिक' : 'Bilingual') :
                           resource.language === 'mr' ? 'मराठी' : 'English'
                         }
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-800 mb-2">
                       {language === 'mr' ? resource.titleMarathi : resource.title}
                     </h3>
-                    
+
                     <p className="text-sm text-gray-600 mb-3">
                       {language === 'mr' ? 'लेखक:' : 'Author:'} {language === 'mr' ? resource.authorMarathi : resource.author}
                     </p>
-                    
+
                     <p className="text-gray-600 mb-4 line-clamp-3">
                       {language === 'mr' ? resource.descriptionMarathi : resource.description}
                     </p>
-                    
+
                     <div className="flex items-center justify-between">
                       <div className="flex items-center text-sm text-gray-500">
                         <Download className="w-4 h-4 mr-1" />
                         {resource.downloadCount} {language === 'mr' ? 'डाउनलोड' : 'downloads'}
                       </div>
-                      
-                      <button className="px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors flex items-center">
+
+                      <button className="px-4 py-2 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors flex items-center">
                         {resource.type === 'video' ? <Play className="w-4 h-4 mr-2" /> : <Download className="w-4 h-4 mr-2" />}
-                        {resource.type === 'video' ? 
-                          (language === 'mr' ? 'पहा' : 'Watch') : 
+                        {resource.type === 'video' ?
+                          (language === 'mr' ? 'पहा' : 'Watch') :
                           (language === 'mr' ? 'डाउनलोड' : 'Download')
                         }
                       </button>
@@ -286,7 +283,7 @@ const TeachingsPage: React.FC = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-6xl text-orange-500 mb-6">"</div>
             <blockquote className="text-2xl md:text-3xl font-light mb-8 leading-relaxed">
-              {language === 'mr' 
+              {language === 'mr'
                 ? 'शिक्षण हे सिंहिणीचे दूध आहे, जो त्याला पिऊ शकतो तो गर्जना करू शकतो.'
                 : 'Education is the milk of lioness, whoever drinks it will roar.'
               }
@@ -305,7 +302,7 @@ const TeachingsPage: React.FC = () => {
             {language === 'mr' ? 'अधिक शिकवणी मिळवा' : 'Get More Teachings'}
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'नवीन शिकवणी आणि संसाधनांसाठी आमच्या न्यूजलेटरची सदस्यता घ्या.'
               : 'Subscribe to our newsletter for new teachings and resources.'
             }
@@ -316,7 +313,7 @@ const TeachingsPage: React.FC = () => {
               placeholder={language === 'mr' ? 'आपला ईमेल' : 'Your email'}
               className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
             />
-            <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors">
+            <button className="px-6 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors">
               {language === 'mr' ? 'सदस्यता घ्या' : 'Subscribe'}
             </button>
           </div>

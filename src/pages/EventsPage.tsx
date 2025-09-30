@@ -19,7 +19,7 @@ const EventsPage: React.FC = () => {
 
   const filteredEvents = allEvents.filter(event => {
     const matchesCategory = selectedCategory === 'all' || event.category === selectedCategory;
-    const matchesSearch = searchTerm === '' || 
+    const matchesSearch = searchTerm === '' ||
       (language === 'mr' ? event.titleMarathi : event.title)
         .toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
@@ -40,7 +40,7 @@ const EventsPage: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">{t('events')}</h1>
           <p className="text-xl max-w-2xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'बौद्ध सण, शैक्षणिक कार्यक्रम आणि सामुदायिक मेळाव्यांची नियमित अपडेट्स'
               : 'Regular updates on Buddhist festivals, educational programs, and community gatherings'
             }
@@ -87,7 +87,7 @@ const EventsPage: React.FC = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">{t('upcomingEvents')}</h2>
-          
+
           {upcomingEvents.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {upcomingEvents.map((event) => (
@@ -98,25 +98,25 @@ const EventsPage: React.FC = () => {
                       alt={language === 'mr' ? event.titleMarathi : event.title}
                       className="w-full h-48 object-cover"
                     />
-                    <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                       {language === 'mr' ? 'आगामी' : 'Upcoming'}
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <div className="flex items-center text-sm text-orange-600 mb-2">
                       <Calendar className="w-4 h-4 mr-1" />
                       {new Date(event.date).toLocaleDateString()}
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-gray-800 mb-3">
                       {language === 'mr' ? event.titleMarathi : event.title}
                     </h3>
-                    
+
                     <p className="text-gray-600 mb-4 line-clamp-3">
                       {language === 'mr' ? event.descriptionMarathi : event.description}
                     </p>
-                    
+
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center text-sm text-gray-500">
                         <Clock className="w-4 h-4 mr-2" />
@@ -127,11 +127,11 @@ const EventsPage: React.FC = () => {
                         {language === 'mr' ? event.locationMarathi : event.location}
                       </div>
                     </div>
-                    
+
                     <div className="flex gap-2">
                       <button
                         onClick={() => handleRegistration(event.id)}
-                        className="flex-1 px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
+                        className="flex-1 px-4 py-2 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
                       >
                         <Users className="w-4 h-4 inline mr-2" />
                         {language === 'mr' ? 'नोंदणी करा' : 'Register'}
@@ -160,7 +160,7 @@ const EventsPage: React.FC = () => {
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">{t('pastEvents')}</h2>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {pastEvents.map((event) => (
                 <div key={event.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift opacity-75">
@@ -174,21 +174,21 @@ const EventsPage: React.FC = () => {
                       {language === 'mr' ? 'संपन्न' : 'Completed'}
                     </div>
                   </div>
-                  
+
                   <div className="p-6">
                     <div className="flex items-center text-sm text-gray-500 mb-2">
                       <Calendar className="w-4 h-4 mr-1" />
                       {new Date(event.date).toLocaleDateString()}
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-gray-800 mb-3">
                       {language === 'mr' ? event.titleMarathi : event.title}
                     </h3>
-                    
+
                     <p className="text-gray-600 mb-4 line-clamp-3">
                       {language === 'mr' ? event.descriptionMarathi : event.description}
                     </p>
-                    
+
                     <button className="w-full px-4 py-2 border border-gray-300 text-gray-600 hover:bg-gray-50 rounded-lg font-medium transition-colors flex items-center justify-center">
                       {language === 'mr' ? 'फोटो पहा' : 'View Photos'}
                       <ArrowRight className="w-4 h-4 ml-2" />
@@ -208,7 +208,7 @@ const EventsPage: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
               {language === 'mr' ? 'कार्यक्रम नोंदणी' : 'Event Registration'}
             </h3>
-            
+
             <form className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -220,7 +220,7 @@ const EventsPage: React.FC = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   {language === 'mr' ? 'ईमेल' : 'Email'}
@@ -231,7 +231,7 @@ const EventsPage: React.FC = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   {language === 'mr' ? 'फोन नंबर' : 'Phone Number'}
@@ -242,11 +242,11 @@ const EventsPage: React.FC = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div className="flex gap-3 pt-4">
                 <button
                   type="submit"
-                  className="flex-1 px-4 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
+                  className="flex-1 px-4 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
                 >
                   {language === 'mr' ? 'नोंदणी करा' : 'Register'}
                 </button>

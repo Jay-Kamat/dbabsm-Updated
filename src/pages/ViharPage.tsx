@@ -32,7 +32,7 @@ const ViharPage: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">{t('viharTitle')}</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'नवीन विहार बांधकाम प्रकल्पाचे तपशीलवार अपडेट्स. स्थापत्य योजना, प्रगती अपडेट्स आणि देणगी तपशील.'
               : 'Detailed updates on the new Vihar building project. Architectural plans, progress updates, and donation details.'
             }
@@ -54,7 +54,7 @@ const ViharPage: React.FC = () => {
                 {language === 'mr' ? 'एकूण प्रगती' : 'Overall Progress'}
               </p>
               <div className="w-full bg-gray-200 rounded-full h-2 mt-4">
-                <div 
+                <div
                   className="bg-green-500 h-2 rounded-full transition-all duration-1000"
                   style={{ width: `${totalProgress}%` }}
                 />
@@ -71,7 +71,7 @@ const ViharPage: React.FC = () => {
                 {language === 'mr' ? 'गोळा केलेली रक्कम' : 'Funds Raised'}
               </p>
               <div className="w-full bg-gray-200 rounded-full h-2 mt-4">
-                <div 
+                <div
                   className="bg-blue-500 h-2 rounded-full transition-all duration-1000"
                   style={{ width: `${(totalRaised / targetAmount) * 100}%` }}
                 />
@@ -109,7 +109,7 @@ const ViharPage: React.FC = () => {
                   {language === 'mr' ? 'मुख्य हॉल डिझाइन' : 'Main Hall Design'}
                 </h3>
                 <p className="text-gray-600">
-                  {language === 'mr' 
+                  {language === 'mr'
                     ? 'पारंपारिक बौद्ध स्थापत्यकलेसह आधुनिक सुविधांचा समावेश असलेला मुख्य प्रार्थना हॉल.'
                     : 'Main prayer hall incorporating traditional Buddhist architecture with modern amenities.'
                   }
@@ -125,7 +125,7 @@ const ViharPage: React.FC = () => {
                   {language === 'mr' ? 'ध्यान हॉल' : 'Meditation Hall'}
                 </h3>
                 <p className="text-gray-600">
-                  {language === 'mr' 
+                  {language === 'mr'
                     ? 'शांत वातावरणात ध्यान आणि आध्यात्मिक अभ्यासासाठी विशेष डिझाइन केलेला हॉल.'
                     : 'Specially designed hall for meditation and spiritual practices in a serene environment.'
                   }
@@ -148,7 +148,7 @@ const ViharPage: React.FC = () => {
           <h2 className="text-4xl font-bold text-gray-800 mb-12 text-center">
             {t('constructionProgress')}
           </h2>
-          
+
           <div className="space-y-8">
             {viharUpdates.map((update, index) => (
               <div key={update.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover-lift">
@@ -168,7 +168,7 @@ const ViharPage: React.FC = () => {
                       </div>
                       <div className="flex items-center">
                         <div className="w-32 bg-gray-200 rounded-full h-2 mr-3">
-                          <div 
+                          <div
                             className="bg-green-500 h-2 rounded-full transition-all duration-1000"
                             style={{ width: `${update.progress}%` }}
                           />
@@ -176,15 +176,15 @@ const ViharPage: React.FC = () => {
                         <span className="text-sm font-medium text-gray-600">{update.progress}%</span>
                       </div>
                     </div>
-                    
+
                     <h3 className="text-2xl font-bold text-gray-800 mb-3">
                       {language === 'mr' ? update.titleMarathi : update.title}
                     </h3>
-                    
+
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {language === 'mr' ? update.descriptionMarathi : update.description}
                     </p>
-                    
+
                     {update.images.length > 1 && (
                       <div className="flex space-x-2">
                         {update.images.slice(1).map((image, imgIndex) => (
@@ -213,7 +213,7 @@ const ViharPage: React.FC = () => {
               {language === 'mr' ? 'देणगी योजना' : 'Donation Plans'}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {language === 'mr' 
+              {language === 'mr'
                 ? 'विहार बांधकामात योगदान देऊन पुण्य कमावा आणि समुदायाच्या आध्यात्मिक विकासात सहभागी व्हा.'
                 : 'Contribute to the Vihar construction and be part of the community\'s spiritual development.'
               }
@@ -226,27 +226,27 @@ const ViharPage: React.FC = () => {
                 <div className={`w-12 h-12 ${tier.color} rounded-full flex items-center justify-center mb-4`}>
                   <Award className="w-6 h-6 text-white" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
                   {language === 'mr' ? tier.nameMarathi : tier.name}
                 </h3>
-                
+
                 <div className="text-3xl font-bold text-gray-800 mb-4">
                   {formatCurrency(tier.amount)}
                 </div>
-                
+
                 <ul className="space-y-2 mb-6">
                   {(language === 'mr' ? tier.benefitsMarathi : tier.benefits).map((benefit, index) => (
                     <li key={index} className="flex items-center text-sm text-gray-600">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mr-2 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
                 </ul>
-                
+
                 <button
                   onClick={() => handleDonation(tier.id)}
-                  className="w-full px-4 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
+                  className="w-full px-4 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
                 >
                   {language === 'mr' ? 'देणगी द्या' : 'Donate Now'}
                 </button>
@@ -263,7 +263,7 @@ const ViharPage: React.FC = () => {
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
               {language === 'mr' ? 'देणगी फॉर्म' : 'Donation Form'}
             </h3>
-            
+
             <form className="space-y-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -275,7 +275,7 @@ const ViharPage: React.FC = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   {language === 'mr' ? 'ईमेल' : 'Email'}
@@ -286,7 +286,7 @@ const ViharPage: React.FC = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   {language === 'mr' ? 'फोन नंबर' : 'Phone Number'}
@@ -297,7 +297,7 @@ const ViharPage: React.FC = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   {language === 'mr' ? 'देणगी रक्कम' : 'Donation Amount'}
@@ -310,11 +310,11 @@ const ViharPage: React.FC = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                 />
               </div>
-              
+
               <div className="flex gap-3 pt-4">
                 <button
                   type="submit"
-                  className="flex-1 px-4 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
+                  className="flex-1 px-4 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
                 >
                   {language === 'mr' ? 'देणगी द्या' : 'Donate'}
                 </button>
@@ -338,7 +338,7 @@ const ViharPage: React.FC = () => {
             {language === 'mr' ? 'विहार बांधकामात सहभागी व्हा' : 'Be Part of Vihar Construction'}
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'आपल्या योगदानाने आम्ही एक सुंदर आणि शांत विहार बांधू शकतो जो भावी पिढ्यांसाठी आध्यात्मिक केंद्र बनेल.'
               : 'With your contribution, we can build a beautiful and peaceful Vihar that will serve as a spiritual center for future generations.'
             }
@@ -346,7 +346,7 @@ const ViharPage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => setShowDonationForm(true)}
-              className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift inline-flex items-center"
+              className="px-8 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift inline-flex items-center"
             >
               <Heart className="w-5 h-5 mr-2" />
               {language === 'mr' ? 'आता देणगी द्या' : 'Donate Now'}

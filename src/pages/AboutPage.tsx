@@ -40,7 +40,7 @@ const AboutPage: React.FC = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold mb-6">{t('aboutTitle')}</h1>
             <p className="text-xl leading-relaxed">
-              {language === 'mr' 
+              {language === 'mr'
                 ? 'आम्ही डॉ. बाबासाहेब आंबेडकरांच्या आदर्शांना आणि बौद्ध धर्माच्या मूल्यांना समर्पित आहोत. समानता, न्याय आणि शिक्षणाचे संदेश पसरवणे हे आमचे ध्येय आहे.'
                 : 'We are dedicated to Dr. Babasaheb Ambedkar\'s ideals and Buddhist values. Our mission is to spread the message of equality, justice, and education in our community.'
               }
@@ -57,19 +57,19 @@ const AboutPage: React.FC = () => {
               <h2 className="text-4xl font-bold text-gray-800 mb-6">{t('historyTitle')}</h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  {language === 'mr' 
+                  {language === 'mr'
                     ? 'डॉ. बाबासाहेब आंबेडकर बौद्ध संस्कार मंडळाची स्थापना २०१४ मध्ये झाली. आमचे संस्थापक सदस्य डॉ. आंबेडकरांच्या विचारसरणीने प्रेरित होऊन या संघटनेची निर्मिती केली.'
                     : 'Dr. Babasaheb Ambedkar Bouddha Sanskar Mandal was established in 2014. Our founding members, inspired by Dr. Ambedkar\'s ideology, created this organization to serve the community.'
                   }
                 </p>
                 <p>
-                  {language === 'mr' 
+                  {language === 'mr'
                     ? 'गेल्या दशकात, आम्ही शिक्षण, आरोग्य, सामाजिक न्याय आणि बौद्ध धर्म प्रचारासाठी अनेक कार्यक्रम राबवले आहेत.'
                     : 'Over the past decade, we have implemented numerous programs for education, health, social justice, and Buddhist dharma propagation.'
                   }
                 </p>
                 <p>
-                  {language === 'mr' 
+                  {language === 'mr'
                     ? 'आमचे कार्य केवळ धार्मिक कार्यक्रमांपुरते मर्यादित नाही, तर सामाजिक बदल आणि समुदायिक विकासावरही केंद्रित आहे.'
                     : 'Our work is not limited to religious programs but also focuses on social change and community development.'
                   }
@@ -108,7 +108,7 @@ const AboutPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-800 mb-4">{t('achievementsTitle')}</h2>
             <p className="text-xl text-gray-600">
-              {language === 'mr' 
+              {language === 'mr'
                 ? 'गेल्या वर्षांत आमची उपलब्धी आणि समुदायावरील प्रभाव'
                 : 'Our accomplishments and impact on the community over the years'
               }
@@ -139,7 +139,7 @@ const AboutPage: React.FC = () => {
                 {language === 'mr' ? 'आमची मूल्ये' : 'Our Values'}
               </h2>
               <p className="text-xl text-gray-600">
-                {language === 'mr' 
+                {language === 'mr'
                   ? 'बौद्ध धर्म आणि डॉ. आंबेडकरांच्या तत्त्वांवर आधारित मूल्ये'
                   : 'Values based on Buddhist principles and Dr. Ambedkar\'s teachings'
                 }
@@ -152,7 +152,7 @@ const AboutPage: React.FC = () => {
                   {language === 'mr' ? 'करुणा' : 'Compassion'}
                 </h3>
                 <p className="text-gray-600">
-                  {language === 'mr' 
+                  {language === 'mr'
                     ? 'सर्व जीवांप्रती करुणा आणि दयाभाव ठेवणे'
                     : 'Showing compassion and kindness to all living beings'
                   }
@@ -164,7 +164,7 @@ const AboutPage: React.FC = () => {
                   {language === 'mr' ? 'समानता' : 'Equality'}
                 </h3>
                 <p className="text-gray-600">
-                  {language === 'mr' 
+                  {language === 'mr'
                     ? 'जाती, धर्म, लिंग यांच्या पलीकडे जाऊन सर्वांना समान मानणे'
                     : 'Treating everyone equally regardless of caste, religion, or gender'
                   }
@@ -176,7 +176,7 @@ const AboutPage: React.FC = () => {
                   {language === 'mr' ? 'शिक्षण' : 'Education'}
                 </h3>
                 <p className="text-gray-600">
-                  {language === 'mr' 
+                  {language === 'mr'
                     ? 'शिक्षणाची महती आणि ज्ञानाचा प्रसार करणे'
                     : 'Promoting the importance of education and spreading knowledge'
                   }
@@ -188,7 +188,7 @@ const AboutPage: React.FC = () => {
                   {language === 'mr' ? 'न्याय' : 'Justice'}
                 </h3>
                 <p className="text-gray-600">
-                  {language === 'mr' 
+                  {language === 'mr'
                     ? 'सामाजिक न्याय आणि मानवी हक्कांसाठी लढणे'
                     : 'Fighting for social justice and human rights'
                   }

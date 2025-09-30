@@ -360,7 +360,7 @@ export const donationTiers: DonationTier[] = [
     amount: 5000,
     benefits: ['Bronze Plaque', 'Special Invitation to Events', 'Certificate'],
     benefitsMarathi: ['कांस्य फलक', 'कार्यक्रमांसाठी विशेष आमंत्रण', 'प्रमाणपत्र'],
-    color: 'bg-orange-500'
+    color: 'bg-blue-600'
   },
   {
     id: '3',

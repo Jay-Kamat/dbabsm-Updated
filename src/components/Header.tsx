@@ -47,11 +47,10 @@ const Header: React.FC = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  isActive(item.path)
-                    ? 'bg-orange-500 text-white'
-                    : 'text-gray-700 hover:text-orange-500 hover:bg-orange-50'
-                }`}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${isActive(item.path)
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                  }`}
               >
                 {item.label}
               </Link>
@@ -67,7 +66,7 @@ const Header: React.FC = () => {
               <Globe className="w-4 h-4" />
               <span className="hidden sm:inline">{language === 'en' ? 'मराठी' : 'English'}</span>
             </button>
-            
+
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden p-2 rounded-md text-gray-700 hover:text-orange-500 hover:bg-orange-50 transition-colors"
@@ -86,11 +85,10 @@ const Header: React.FC = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                    isActive(item.path)
-                      ? 'bg-orange-500 text-white'
-                      : 'text-gray-700 hover:text-orange-500 hover:bg-orange-50'
-                  }`}
+                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${isActive(item.path)
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-700 hover:text-orange-500 hover:bg-orange-50'
+                    }`}
                 >
                   {item.label}
                 </Link>

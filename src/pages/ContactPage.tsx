@@ -40,7 +40,7 @@ const ContactPage: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">{t('contactTitle')}</h1>
           <p className="text-xl max-w-2xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'आम्ही आपल्याशी संवाद साधण्यास उत्सुक आहोत. कृपया आपले प्रश्न, सूचना किंवा अभिप्राय आमच्याशी शेअर करा.'
               : 'We\'re excited to hear from you. Please share your questions, suggestions, or feedback with us.'
             }
@@ -55,7 +55,7 @@ const ContactPage: React.FC = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl font-bold text-gray-800 mb-8">{t('getInTouch')}</h2>
-              
+
               <div className="space-y-6">
                 {/* Address */}
                 <div className="flex items-start space-x-4">
@@ -128,7 +128,7 @@ const ContactPage: React.FC = () => {
             <div>
               <div className="bg-white p-8 rounded-2xl shadow-lg">
                 <h2 className="text-3xl font-bold text-gray-800 mb-8">{t('sendMessage')}</h2>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -212,7 +212,7 @@ const ContactPage: React.FC = () => {
 
                   <button
                     type="submit"
-                    className="w-full px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift flex items-center justify-center"
+                    className="w-full px-6 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift flex items-center justify-center"
                   >
                     <Send className="w-5 h-5 mr-2" />
                     {t('sendMessage')}

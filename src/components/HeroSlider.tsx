@@ -20,7 +20,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ language }) => {
   const slides: Slide[] = [
     {
       id: 1,
-      image: 'https://images.pexels.com/photos/6976901/pexels-photo-6976901.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: '/assets/images/babasaheb.png?auto=compress&cs=tinysrgb&w=1920&h=900&fit=crop',
       title: 'Dr. Babasaheb Ambedkar',
       titleMarathi: 'डॉ. बाबासाहेब आंबेडकर',
       subtitle: 'Father of Indian Constitution & Champion of Social Justice',
@@ -28,7 +28,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ language }) => {
     },
     {
       id: 2,
-      image: 'https://images.pexels.com/photos/7978764/pexels-photo-7978764.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: '/assets/images/buddha.png??auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
       title: 'Lord Buddha',
       titleMarathi: 'भगवान बुद्ध',
       subtitle: 'The Enlightened One - Path to Liberation',
@@ -36,7 +36,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ language }) => {
     },
     {
       id: 3,
-      image: 'https://images.pexels.com/photos/6976900/pexels-photo-6976900.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+      image: '/assets/images/buddha1.png?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
       title: 'Buddhist Community',
       titleMarathi: 'बौद्ध समुदाय',
       subtitle: 'Unity in Dharma - Strength in Community',
@@ -70,9 +70,8 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ language }) => {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            index === currentSlide ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <div className="relative w-full h-full">
             <img
@@ -81,7 +80,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ language }) => {
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40" />
-            
+
             {/* Content */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white max-w-4xl px-4">
@@ -92,7 +91,7 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ language }) => {
                   {language === 'mr' ? slide.subtitleMarathi : slide.subtitle}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center slide-up">
-                  <button className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift">
+                  <button className="px-8 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift">
                     Learn More
                   </button>
                   <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-medium transition-colors hover-lift">
@@ -125,9 +124,8 @@ const HeroSlider: React.FC<HeroSliderProps> = ({ language }) => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              index === currentSlide ? 'bg-orange-500' : 'bg-white bg-opacity-50'
-            }`}
+            className={`w-3 h-3 rounded-full transition-all ${index === currentSlide ? 'bg-blue-600' : 'bg-white bg-opacity-50'
+              }`}
           />
         ))}
       </div>

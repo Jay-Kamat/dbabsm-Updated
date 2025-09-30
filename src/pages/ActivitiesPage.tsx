@@ -16,7 +16,7 @@ const ActivitiesPage: React.FC = () => {
     { id: 'religious', name: language === 'mr' ? 'धार्मिक' : 'Religious' }
   ];
 
-  const filteredActivities = allActivities.filter(activity => 
+  const filteredActivities = allActivities.filter(activity =>
     selectedCategory === 'all' || activity.category === selectedCategory
   );
 
@@ -37,7 +37,7 @@ const ActivitiesPage: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">{t('activitiesTitle')}</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'विविध सामाजिक, धार्मिक आणि शैक्षणिक क्रियाकलापांची प्रतिमा आणि व्हिडिओ. ध्यान शिबिरे, जागरूकता कार्यक्रम आणि समुदायिक कल्याण उपक्रमांचे तपशील.'
               : 'Images and videos of various social, religious, and educational activities. Details about meditation camps, awareness programs, and community welfare initiatives.'
             }
@@ -60,11 +60,10 @@ const ActivitiesPage: React.FC = () => {
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-full font-medium transition-colors ${
-                    selectedCategory === category.id
-                      ? 'bg-orange-500 text-white'
+                  className={`px-4 py-2 rounded-full font-medium transition-colors ${selectedCategory === category.id
+                      ? 'bg-blue-600 text-white'
                       : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
-                  }`}
+                    }`}
                 >
                   {category.name}
                 </button>
@@ -100,7 +99,7 @@ const ActivitiesPage: React.FC = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${getCategoryColor(activity.category)}`}>
@@ -112,18 +111,18 @@ const ActivitiesPage: React.FC = () => {
                       {new Date(activity.date).toLocaleDateString()}
                     </div>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold text-gray-800 mb-3">
                     {language === 'mr' ? activity.titleMarathi : activity.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 mb-4 line-clamp-3">
                     {language === 'mr' ? activity.descriptionMarathi : activity.description}
                   </p>
-                  
+
                   <button
                     onClick={() => setSelectedActivity(activity.id)}
-                    className="w-full px-4 py-2 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
+                    className="w-full px-4 py-2 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
                   >
                     {language === 'mr' ? 'अधिक पहा' : 'View More'}
                   </button>
@@ -141,7 +140,7 @@ const ActivitiesPage: React.FC = () => {
             {(() => {
               const activity = allActivities.find(a => a.id === selectedActivity);
               if (!activity) return null;
-              
+
               return (
                 <div>
                   {/* Header */}
@@ -169,13 +168,13 @@ const ActivitiesPage: React.FC = () => {
                       </button>
                     </div>
                   </div>
-                  
+
                   {/* Content */}
                   <div className="p-6">
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {language === 'mr' ? activity.descriptionMarathi : activity.description}
                     </p>
-                    
+
                     {/* Image Gallery */}
                     <div className="grid md:grid-cols-2 gap-4">
                       {activity.images.map((image, index) => (
@@ -187,7 +186,7 @@ const ActivitiesPage: React.FC = () => {
                         />
                       ))}
                     </div>
-                    
+
                     {/* Videos Section (if available) */}
                     {activity.videos && activity.videos.length > 0 && (
                       <div className="mt-6">
@@ -221,13 +220,13 @@ const ActivitiesPage: React.FC = () => {
             {language === 'mr' ? 'आमच्या क्रियाकलापांमध्ये सहभागी व्हा' : 'Participate in Our Activities'}
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'समुदायिक सेवा, ध्यान सत्र आणि जागरूकता कार्यक्रमांमध्ये सहभागी होऊन सामाजिक बदलाचा भाग बना.'
               : 'Be part of social change by participating in community service, meditation sessions, and awareness programs.'
             }
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift">
+            <button className="px-8 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift">
               {language === 'mr' ? 'स्वयंसेवक बना' : 'Become a Volunteer'}
             </button>
             <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-medium transition-colors hover-lift">

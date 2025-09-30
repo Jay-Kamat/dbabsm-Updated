@@ -60,7 +60,7 @@ const GalleryPage: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">{t('galleryTitle')}</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'कार्यक्रम, क्रियाकलाप आणि बौद्ध शिकवणी दर्शविणारे फोटो आणि व्हिडिओ संग्रहालय.'
               : 'Photo & Video archive showcasing events, activities, and Buddhist teachings.'
             }
@@ -102,11 +102,10 @@ const GalleryPage: React.FC = () => {
                   <button
                     key={type.id}
                     onClick={() => setSelectedType(type.id)}
-                    className={`px-4 py-2 rounded-full font-medium transition-colors ${
-                      selectedType === type.id
-                        ? 'bg-orange-500 text-white'
+                    className={`px-4 py-2 rounded-full font-medium transition-colors ${selectedType === type.id
+                        ? 'bg-blue-600 text-white'
                         : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
-                    }`}
+                      }`}
                   >
                     {type.name}
                   </button>
@@ -130,7 +129,7 @@ const GalleryPage: React.FC = () => {
                       alt={language === 'mr' ? item.titleMarathi : item.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-                    
+
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex space-x-2">
@@ -145,13 +144,12 @@ const GalleryPage: React.FC = () => {
 
                     {/* Type Badge */}
                     <div className="absolute top-3 left-3">
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                        item.type === 'video' 
-                          ? 'bg-red-500 text-white' 
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${item.type === 'video'
+                          ? 'bg-red-500 text-white'
                           : 'bg-blue-500 text-white'
-                      }`}>
-                        {item.type === 'video' ? 
-                          (language === 'mr' ? 'व्हिडिओ' : 'Video') : 
+                        }`}>
+                        {item.type === 'video' ?
+                          (language === 'mr' ? 'व्हिडिओ' : 'Video') :
                           (language === 'mr' ? 'फोटो' : 'Photo')
                         }
                       </span>
@@ -165,7 +163,7 @@ const GalleryPage: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="p-4">
                     <h3 className="font-semibold text-gray-800 mb-1 line-clamp-1">
                       {language === 'mr' ? item.titleMarathi : item.title}
@@ -228,7 +226,7 @@ const GalleryPage: React.FC = () => {
                 alt={language === 'mr' ? filteredItems[lightboxImage].titleMarathi : filteredItems[lightboxImage].title}
                 className="max-w-full max-h-full object-contain"
               />
-              
+
               {/* Image Info */}
               <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-4">
                 <h3 className="text-lg font-semibold mb-1">
@@ -254,12 +252,12 @@ const GalleryPage: React.FC = () => {
             {language === 'mr' ? 'आपले फोटो शेअर करा' : 'Share Your Photos'}
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'आमच्या कार्यक्रमांचे आणि क्रियाकलापांचे फोटो आणि व्हिडिओ आमच्यासोबत शेअर करा.'
               : 'Share your photos and videos from our events and activities with us.'
             }
           </p>
-          <button className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift">
+          <button className="px-8 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift">
             {language === 'mr' ? 'फोटो अपलोड करा' : 'Upload Photos'}
           </button>
         </div>

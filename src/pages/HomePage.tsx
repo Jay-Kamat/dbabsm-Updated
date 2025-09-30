@@ -23,7 +23,7 @@ const HomePage: React.FC = () => {
               {language === 'mr' ? 'आमचे ध्येय आणि दृष्टी' : 'Our Mission & Vision'}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              {language === 'mr' 
+              {language === 'mr'
                 ? 'बौद्ध मूल्ये आणि डॉ. आंबेडकरांच्या विचारसरणीला प्रोत्साहन देत समाजात सकारात्मक बदल घडवून आणणे.'
                 : 'Promoting Buddhist values and Dr. Ambedkar\'s ideology to bring positive change in society.'
               }
@@ -100,7 +100,7 @@ const HomePage: React.FC = () => {
           <div className="text-center mt-12">
             <Link
               to="/events"
-              className="inline-flex items-center px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift"
+              className="inline-flex items-center px-8 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift"
             >
               {t('viewAll')}
               <ArrowRight className="w-5 h-5 ml-2" />
@@ -148,7 +148,7 @@ const HomePage: React.FC = () => {
             {language === 'mr' ? 'आमच्या समुदायात सामील व्हा' : 'Join Our Community'}
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'सामाजिक न्याय, शिक्षण आणि बौद्ध मूल्यांसाठी आमच्या मिशनमध्ये सहभागी व्हा.'
               : 'Be part of our mission for social justice, education, and Buddhist values.'
             }
@@ -156,7 +156,7 @@ const HomePage: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/members"
-              className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift inline-flex items-center"
+              className="px-8 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift inline-flex items-center"
             >
               <Users className="w-5 h-5 mr-2" />
               {language === 'mr' ? 'सदस्यत्व घ्या' : 'Become a Member'}

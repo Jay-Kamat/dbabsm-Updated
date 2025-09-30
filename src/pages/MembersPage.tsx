@@ -13,7 +13,7 @@ const MembersPage: React.FC = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">{t('membersTitle')}</h1>
           <p className="text-xl max-w-2xl mx-auto">
-            {language === 'mr' 
+            {language === 'mr'
               ? 'आमच्या संघटनेचे नेतृत्व करणारे समर्पित सदस्य ज्यांनी समुदायाच्या कल्याणासाठी आपले जीवन अर्पण केले आहे.'
               : 'Meet the dedicated members who lead our organization and have devoted their lives to community welfare.'
             }
@@ -43,7 +43,7 @@ const MembersPage: React.FC = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <div className="space-y-3">
                     {member.contact && (
@@ -59,10 +59,10 @@ const MembersPage: React.FC = () => {
                       </div>
                     )}
                   </div>
-                  
+
                   <div className="mt-6 pt-4 border-t border-gray-100">
                     <p className="text-sm text-gray-500 mb-3">
-                      {language === 'mr' 
+                      {language === 'mr'
                         ? 'समुदायाच्या सेवेत कार्यरत'
                         : 'Dedicated to community service'
                       }
@@ -87,16 +87,16 @@ const MembersPage: React.FC = () => {
               {language === 'mr' ? 'आमच्यात सामील व्हा' : 'Join Our Team'}
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              {language === 'mr' 
+              {language === 'mr'
                 ? 'समुदायाच्या सेवेत आणि सामाजिक बदलाच्या कार्यात सहभागी होण्यासाठी आमच्यात सामील व्हा.'
                 : 'Join us in serving the community and working towards social change and empowerment.'
               }
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift">
+              <button className="px-8 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift">
                 {language === 'mr' ? 'सदस्यत्व घ्या' : 'Become a Member'}
               </button>
-              <button className="px-8 py-3 bg-transparent border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white rounded-lg font-medium transition-colors hover-lift">
+              <button className="px-8 py-3 bg-transparent border-2 border-orange-500 text-orange-600 hover:bg-blue-600 hover:text-white rounded-lg font-medium transition-colors hover-lift">
                 {language === 'mr' ? 'अधिक माहिती' : 'Learn More'}
               </button>
             </div>
