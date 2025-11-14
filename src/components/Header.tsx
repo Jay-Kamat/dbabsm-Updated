@@ -28,9 +28,6 @@ const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">॥</span>
-            </div>
             <div className="hidden sm:block">
               <h1 className="text-lg font-bold text-gray-800 leading-tight">
                 {language === 'mr' ? 'डॉ. बाबासाहेब आंबेडकर' : 'Dr. Babasaheb Ambedkar'}
@@ -42,12 +39,13 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-2 flex-nowrap whitespace-nowrap text-[13px]">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${isActive(item.path)
+                className={`px-2 py-2 rounded-md font-medium transition-colors duration-200 ${isActive(item.path)
                   ? 'bg-blue-600 text-white'
                   : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
                   }`}
@@ -56,6 +54,7 @@ const Header: React.FC = () => {
               </Link>
             ))}
           </nav>
+
 
           {/* Language Toggle & Mobile Menu Button */}
           <div className="flex items-center space-x-3">
