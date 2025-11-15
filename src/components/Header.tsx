@@ -23,7 +23,7 @@ const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass-effect">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-sky-50 glass-effect">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -39,16 +39,19 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-2 flex-nowrap whitespace-nowrap text-[13px]">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-2 py-2 rounded-md font-medium transition-colors duration-200 ${isActive(item.path)
-                  ? 'bg-blue-600 text-white'
-                  : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
-                  }`}
+                className={`
+  px-2 py-2 rounded-md font-semibold text-[12px] transition-colors duration-200 
+  ${isActive(item.path)
+                    ? 'bg-blue-600 text-white'
+                    : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50'
+                  }
+`}
+
               >
                 {item.label}
               </Link>

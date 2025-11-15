@@ -12,9 +12,6 @@ const Footer: React.FC = () => {
           {/* Organization Info */}
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-xl">॥</span>
-              </div>
               <div>
                 <h3 className="text-lg font-bold">Dr. Babasaheb Ambedkar</h3>
                 <p className="text-sm text-gray-300">Bouddha Sanskar Mandal</p>
@@ -67,18 +64,17 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-orange-500 mt-0.5 flex-shrink-0" />
                 <p className="text-gray-300">
-                  123 Buddhism Street<br />
-                  Ambedkar Nagar<br />
-                  Maharashtra, India
+                  Vaishali Boudh Vihar <br /> Lumbini Van, Shirol Road<br />
+                  Jaysingpur 416101<br /> Maharashtra, India
                 </p>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-orange-500" />
-                <p className="text-gray-300">+91 12345 67890</p>
+                <p className="text-gray-300">(02322) 221391</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-orange-500" />
-                <p className="text-gray-300">info@ambedkarmandal.org</p>
+                <p className="text-gray-300">info@drbabasahebambedkarboudhsanskar.org</p>
               </div>
             </div>
           </div>
@@ -87,10 +83,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-400">
-              © 2024 Dr. Babasaheb Ambedkar Bouddha Sanskar Mandal. All rights reserved.
-            </p>
-            <p className="text-sm text-gray-400 flex items-center mt-2 md:mt-0">
-              Made with <Heart className="w-4 h-4 text-red-500 mx-1" /> for the community
+              © 2025 Dr. Babasaheb Ambedkar Bouddha Sanskar Mandal. All rights reserved.
             </p>
           </div>
         </div>

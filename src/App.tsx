@@ -17,7 +17,12 @@ function App() {
   return (
     <LanguageProvider>
       <Router>
-        <div className="min-h-screen bg-gray-50">
+        {/* <div className="min-h-screen bg-gradient-to-b from-sky-200 to-sky-400">
+          <div className="min-h-screen bg-sky-100"> 
+          <div className="min-h-screen bg-gray-50">
+          */}
+
+        <div className="min-h-screen bg-sky-50">
           <Header />
           <main>
             <Routes>

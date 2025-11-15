@@ -128,7 +128,7 @@ const EventsPage: React.FC = () => {
                       </div>
                     </div>
 
-                    <div className="flex gap-2">
+                    {/* <div className="flex gap-2">
                       <button
                         onClick={() => handleRegistration(event.id)}
                         className="flex-1 px-4 py-2 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors"
@@ -139,7 +139,7 @@ const EventsPage: React.FC = () => {
                       <button className="px-4 py-2 border border-orange-500 text-orange-600 hover:bg-orange-50 rounded-lg font-medium transition-colors">
                         {language === 'mr' ? 'तपशील' : 'Details'}
                       </button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}

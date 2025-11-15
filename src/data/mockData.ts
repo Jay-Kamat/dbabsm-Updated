@@ -66,43 +66,43 @@ export const members: Member[] = [
 export const events: Event[] = [
   {
     id: '1',
-    title: 'Buddha Purnima Celebration 2024',
-    titleMarathi: 'बुद्ध पूर्णिमा उत्सव 2024',
-    description: 'Join us for the grand celebration of Buddha Purnima with meditation, prayers, and cultural programs.',
-    descriptionMarathi: 'ध्यान, प्रार्थना आणि सांस्कृतिक कार्यक्रमांसह बुद्ध पूर्णिमेच्या भव्य उत्सवात सामील व्हा.',
-    date: '2024-05-23',
-    time: '06:00 AM - 08:00 PM',
+    title: '35th All India Buddhist Dhamma Mahaparishad 2025',
+    titleMarathi: '35वी अखिल भारतीय बौद्ध धम्म महापरिषद 2025',
+    description: 'Dhamma Flag Hoisting & Dhamma Discourse by the Bhikkhu Sangha.',
+    descriptionMarathi: 'धम्म ध्वजारोहण व भिक्खू संघाची धम्म देसना',
+    date: '2025-12-04',
+    time: '09:00 AM - 06:00 PM',
     location: 'Community Hall, Ambedkar Nagar',
     locationMarathi: 'सामुदायिक हॉल, आंबेडकर नगर',
-    image: 'https://images.pexels.com/photos/6976901/pexels-photo-6976901.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    image: '/assets/images/jahirat.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     category: 'festival'
   },
   {
     id: '2',
-    title: 'Dr. Ambedkar Jayanti',
-    titleMarathi: 'डॉ. आंबेडकर जयंती',
-    description: 'Commemorating the birth anniversary of Dr. B.R. Ambedkar with lectures and discussions.',
-    descriptionMarathi: 'व्याख्यान आणि चर्चेसह डॉ. बी.आर. आंबेडकरांची जयंती साजरी करणे.',
-    date: '2024-04-14',
-    time: '09:00 AM - 06:00 PM',
+    title: 'Tathagat Buddhist Sunday School',
+    titleMarathi: 'तथागत बौद्ध रविवार शाळा',
+    description: 'A weekly learning space where children explore Dharma through stories, meditation, and positive life practices.',
+    descriptionMarathi: 'रविवारी आयोजित केली जाणारी ही शाळा मुलांना बुद्धांच्या शिकवणींची ओळख करून देते आणि ध्यान, साक्षरता व नैतिक संस्कार यांचा समतोल अभ्यास घडवते.',
+    date: '2025-11-17',
+    time: '10:00 AM - 11:00 PM',
     location: 'Ambedkar Bhawan',
     locationMarathi: 'आंबेडकर भवन',
-    image: 'https://images.pexels.com/photos/6976900/pexels-photo-6976900.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    image: '/assets/images/sundayschool.jpg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     category: 'educational'
   },
-  {
-    id: '3',
-    title: 'Community Welfare Drive',
-    titleMarathi: 'सामुदायिक कल्याण अभियान',
-    description: 'Monthly community service initiative including free health checkups and educational workshops.',
-    descriptionMarathi: 'विनामूल्य आरोग्य तपासणी आणि शैक्षणिक कार्यशाळांसह मासिक सामुदायिक सेवा उपक्रम.',
-    date: '2024-03-15',
-    time: '10:00 AM - 04:00 PM',
-    location: 'Various Locations',
-    locationMarathi: 'विविध ठिकाणी',
-    image: 'https://images.pexels.com/photos/6995094/pexels-photo-6995094.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-    category: 'community'
-  }
+  // {
+  //   id: '3',
+  //   title: 'Community Welfare Drive',
+  //   titleMarathi: 'सामुदायिक कल्याण अभियान',
+  //   description: 'Monthly community service initiative including free health checkups and educational workshops.',
+  //   descriptionMarathi: 'विनामूल्य आरोग्य तपासणी आणि शैक्षणिक कार्यशाळांसह मासिक सामुदायिक सेवा उपक्रम.',
+  //   date: '2024-03-15',
+  //   time: '10:00 AM - 04:00 PM',
+  //   location: 'Various Locations',
+  //   locationMarathi: 'विविध ठिकाणी',
+  //   image: 'https://images.pexels.com/photos/6995094/pexels-photo-6995094.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+  //   category: 'community'
+  // }
 ];
 
 export const activities: Activity[] = [

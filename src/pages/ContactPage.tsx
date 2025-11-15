@@ -65,10 +65,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">{t('address')}</h3>
                     <p className="text-gray-600">
-                      123 Buddhism Street<br />
-                      Ambedkar Nagar<br />
-                      Maharashtra 411001<br />
-                      India
+                      Vaishali Boudh Vihar <br /> Lumbini Van, Shirol Road<br />
+                      Jaysingpur 416101<br /> Maharashtra, India
                     </p>
                   </div>
                 </div>
@@ -80,8 +78,8 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">{t('phone')}</h3>
-                    <p className="text-gray-600">+91 12345 67890</p>
-                    <p className="text-gray-600">+91 98765 43210</p>
+                    <p className="text-gray-600">(02322) 221391</p>
+                    {/* <p className="text-gray-600">+91 98765 43210</p> */}
                   </div>
                 </div>
 
@@ -92,8 +90,7 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">{t('email')}</h3>
-                    <p className="text-gray-600">info@ambedkarmandal.org</p>
-                    <p className="text-gray-600">contact@ambedkarmandal.org</p>
+                    <p className="text-gray-600">info@drbabasahebambedkarboudhsanskar.org</p>
                   </div>
                 </div>
 
@@ -117,11 +114,17 @@ const ContactPage: React.FC = () => {
               </div>
 
               {/* Map placeholder */}
-              <div className="mt-8 bg-gray-200 h-64 rounded-xl flex items-center justify-center">
-                <p className="text-gray-500">
-                  {language === 'mr' ? 'नकाशा येथे दिसेल' : 'Interactive Map Coming Soon'}
-                </p>
+              <div className="mt-8 h-64 rounded-xl border border-gray-300 shadow-lg overflow-hidden bg-white">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.933585824293!2d74.55435059999999!3d16.77997952714743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc11f0a87d48015%3A0xb02873c352eab321!2sDr%20Babasaheb%20Ambedkar%20Baudha%20Sanskar%20Mandal%20REGISTERED!5e0!3m2!1sen!2sin!4v1763239070535!5m2!1sen!2sin"
+                  className="w-full h-full border-0"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
+
+
             </div>
 
             {/* Contact Form */}

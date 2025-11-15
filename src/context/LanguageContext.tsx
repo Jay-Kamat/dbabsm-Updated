@@ -21,15 +21,15 @@ const translations = {
     gallery: 'Gallery',
     teachings: 'Teachings & Resources',
     contact: 'Contact Us',
-    
+
     // Homepage
     heroTitle: 'Dr. Babasaheb Ambedkar Bouddha Sanskar Mandal',
     heroSubtitle: 'Preserving Buddhist Values & Dr. Ambedkar\'s Vision',
     mission: 'Mission',
     vision: 'Vision',
-    missionText: 'To promote Buddhist teachings and Dr. Ambedkar\'s principles of equality, education, and social justice in our community.',
-    visionText: 'A society based on Buddhist values of compassion, wisdom, and social harmony, following Dr. Ambedkar\'s path of enlightenment.',
-    
+    missionText: 'To spread the light of Buddha–Ambedkarite thought to every section of society through equality, education, Dhamma values, and welfare activities, and to create a just, aware, and cultured society.',
+    visionText: 'To build an enlightened, empowered, and ethically grounded Buddha–Ambedkarite society through a disciplined and structured system of value-based education, leadership-development initiatives, and social-justice programs; and to create a sustainable, inclusive, and progressive social ecosystem that promotes knowledge, dignity, and justice.',
+
     // Common
     learnMore: 'Learn More',
     readMore: 'Read More',
@@ -39,40 +39,40 @@ const translations = {
     submit: 'Submit',
     cancel: 'Cancel',
     loading: 'Loading...',
-    
+
     // About
     aboutTitle: 'About Our Organization',
     historyTitle: 'Our History',
     achievementsTitle: 'Our Achievements',
-    
+
     // Events
     upcomingEvents: 'Upcoming Events',
     pastEvents: 'Past Events',
     eventRegistration: 'Event Registration',
-    
+
     // Activities
     activitiesTitle: 'Our Activities',
     meditationCamps: 'Meditation Camps',
     awarenessPrograms: 'Awareness Programs',
     communityWelfare: 'Community Welfare',
-    
+
     // Members
     membersTitle: 'Our Committee Members',
     president: 'President',
     secretary: 'Secretary',
     treasurer: 'Treasurer',
-    
+
     // Gallery
     galleryTitle: 'Photo & Video Gallery',
     photos: 'Photos',
     videos: 'Videos',
-    
+
     // Teachings
     teachingsTitle: 'Teachings & Resources',
     buddhaTeachings: 'Buddha\'s Teachings',
     ambedkarTeachings: 'Dr. Ambedkar\'s Teachings',
     digitalResources: 'Digital Resources',
-    
+
     // Contact
     contactTitle: 'Contact Us',
     getInTouch: 'Get in Touch',
@@ -80,7 +80,7 @@ const translations = {
     phone: 'Phone',
     email: 'Email',
     sendMessage: 'Send Message',
-    
+
     // Vihar Construction
     viharTitle: 'New Vihar Construction Project',
     constructionProgress: 'Construction Progress',
@@ -98,15 +98,15 @@ const translations = {
     gallery: 'गॅलरी',
     teachings: 'शिकवणी आणि संसाधने',
     contact: 'संपर्क',
-    
+
     // Homepage
     heroTitle: 'डॉ. बाबासाहेब आंबेडकर बौद्ध संस्कार मंडळ',
     heroSubtitle: 'बौद्ध मूल्ये आणि डॉ. आंबेडकरांच्या दृष्टीकोनाचे जतन',
     mission: 'ध्येय',
     vision: 'दृष्टी',
-    missionText: 'आमच्या समुदायात बौद्ध शिकवणी आणि समानता, शिक्षण आणि सामाजिक न्यायाच्या डॉ. आंबेडकरांच्या तत्त्वांचा प्रचार करणे.',
-    visionText: 'डॉ. आंबेडकरांच्या ज्ञानाच्या मार्गावर चालत करुणा, ज्ञान आणि सामाजिक सौहार्द्याच्या बौद्ध मूल्यांवर आधारित समाज.',
-    
+    missionText: 'समता, शिक्षण, धम्मसंस्कार आणि लोककल्याणकारी उपक्रमांच्या माध्यमातून बुद्ध–आंबेडकरी विचारांचा प्रकाश समाजातील प्रत्येक घटकापर्यंत पोहोचवून, न्यायपूर्ण, जागरूक आणि संस्कारी समाजाची निर्मिती करणे.',
+    visionText: 'मूल्याधारित शिक्षणाच्या शिस्तबद्ध आणि संरचित प्रणालीद्वारे, नेतृत्व-विकास उपक्रमांद्वारे आणि सामाजिक न्यायसंबंधी कार्यक्रमांद्वारे प्रबुद्ध, सशक्त आणि नैतिकतेवर आधारित बुद्ध–आंबेडकरी समाजाची निर्मिती करणे; तसेच ज्ञान, सन्मान आणि न्याय यांचा प्रसार करणारी टिकाऊ, सर्वसमावेशक आणि प्रगतिशील अशी सामाजिक परिसंस्था उभी करणे.',
+
     // Common
     learnMore: 'अधिक जाणून घ्या',
     readMore: 'अधिक वाचा',
@@ -116,40 +116,40 @@ const translations = {
     submit: 'सबमिट करा',
     cancel: 'रद्द करा',
     loading: 'लोड होत आहे...',
-    
+
     // About
     aboutTitle: 'आमच्या संघटनेबद्दल',
     historyTitle: 'आमचा इतिहास',
     achievementsTitle: 'आमची उपलब्धी',
-    
+
     // Events
     upcomingEvents: 'आगामी कार्यक्रम',
     pastEvents: 'मागील कार्यक्रम',
     eventRegistration: 'कार्यक्रम नोंदणी',
-    
+
     // Activities
     activitiesTitle: 'आमचे क्रियाकलाप',
     meditationCamps: 'ध्यान शिबिरे',
     awarenessPrograms: 'जागरूकता कार्यक्रम',
     communityWelfare: 'समुदायिक कल्याण',
-    
+
     // Members
     membersTitle: 'आमचे समिती सदस्य',
     president: 'अध्यक्ष',
     secretary: 'सचिव',
     treasurer: 'खजिनदार',
-    
+
     // Gallery
     galleryTitle: 'फोटो आणि व्हिडिओ गॅलरी',
     photos: 'फोटो',
     videos: 'व्हिडिओ',
-    
+
     // Teachings
     teachingsTitle: 'शिकवणी आणि संसाधने',
     buddhaTeachings: 'बुद्धांची शिकवणी',
     ambedkarTeachings: 'डॉ. आंबेडकरांची शिकवणी',
     digitalResources: 'डिजिटल संसाधने',
-    
+
     // Contact
     contactTitle: 'आमच्याशी संपर्क साधा',
     getInTouch: 'संपर्कात रहा',
@@ -157,7 +157,7 @@ const translations = {
     phone: 'फोन',
     email: 'ईमेल',
     sendMessage: 'संदेश पाठवा',
-    
+
     // Vihar Construction
     viharTitle: 'नवीन विहार बांधकाम प्रकल्प',
     constructionProgress: 'बांधकाम प्रगती',
