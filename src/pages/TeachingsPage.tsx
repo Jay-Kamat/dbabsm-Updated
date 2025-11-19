@@ -91,8 +91,8 @@ const TeachingsPage: React.FC = () => {
               <button
                 onClick={() => setActiveTab('teachings')}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors ${activeTab === 'teachings'
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-700 hover:text-orange-600'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-700 hover:text-orange-600'
                   }`}
               >
                 {t('buddhaTeachings')}
@@ -100,8 +100,8 @@ const TeachingsPage: React.FC = () => {
               <button
                 onClick={() => setActiveTab('resources')}
                 className={`px-6 py-3 rounded-lg font-medium transition-colors ${activeTab === 'resources'
-                    ? 'bg-blue-600 text-white'
-                    : 'text-gray-700 hover:text-orange-600'
+                  ? 'bg-blue-600 text-white'
+                  : 'text-gray-700 hover:text-orange-600'
                   }`}
               >
                 {t('digitalResources')}
@@ -190,8 +190,8 @@ const TeachingsPage: React.FC = () => {
                       </span>
                     </div>
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${teaching.category === 'teaching' ? 'bg-blue-100 text-blue-800' :
-                        teaching.category === 'principle' ? 'bg-green-100 text-green-800' :
-                          'bg-purple-100 text-purple-800'
+                      teaching.category === 'principle' ? 'bg-green-100 text-green-800' :
+                        'bg-purple-100 text-purple-800'
                       }`}>
                       {teachingCategories.find(cat => cat.id === teaching.category)?.name}
                     </span>
@@ -284,8 +284,8 @@ const TeachingsPage: React.FC = () => {
             <div className="text-6xl text-orange-500 mb-6">"</div>
             <blockquote className="text-2xl md:text-3xl font-light mb-8 leading-relaxed">
               {language === 'mr'
-                ? 'शिक्षण हे सिंहिणीचे दूध आहे, जो त्याला पिऊ शकतो तो गर्जना करू शकतो.'
-                : 'Education is the milk of lioness, whoever drinks it will roar.'
+                ? 'शिक्षण हे वाघिणीचे दूध आहे जो पेईल तो गुरगुरल्या शिवाय राहणार नाही.'
+                : 'Education is the milk of a tigress, whoever drinks it will not remain without roaring.'
               }
             </blockquote>
             <cite className="text-xl text-orange-300">

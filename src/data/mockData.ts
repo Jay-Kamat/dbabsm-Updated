@@ -224,7 +224,7 @@ export const teachings: Teaching[] = [
   {
     id: '6',
     title: 'Education is the Milk of Lioness',
-    titleMarathi: 'शिक्षण हे सिंहिणीचे दूध आहे',
+    titleMarathi: 'शिक्षण हे वाघिणीचे दूध आहे',
     author: 'Ambedkar',
     content: 'Dr. Ambedkar emphasized that education is the most powerful tool for social transformation and individual empowerment.',
     contentMarathi: 'डॉ. आंबेडकरांनी भर दिला की शिक्षण हे सामाजिक बदल आणि वैयक्तिक सशक्तिकरणासाठी सर्वात शक्तिशाली साधन आहे.',
@@ -453,7 +453,7 @@ export const allGalleryItems: GalleryItem[] = [
   {
     id: '6',
     type: 'video',
-    src: 'https://images.pexels.com/photos/7978764/pexels-photo-7978764.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+    src: '/assets/images/VID-20251116-WA0006.mp4?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
     title: 'Dhamma Teaching Session',
     titleMarathi: 'धम्म शिक्षण सत्र',
     description: 'Weekly Dhamma teaching and discussion session',
