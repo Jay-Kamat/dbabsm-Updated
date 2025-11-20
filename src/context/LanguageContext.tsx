@@ -21,7 +21,8 @@ const translations = {
     gallery: 'Gallery',
     teachings: 'Teachings & Resources',
     contact: 'Contact Us',
-
+    salagnsanstha: 'Salagn Sanstha',
+    bhante: 'Bhante',
     // Homepage
     heroTitle: 'Dr. Babasaheb Ambedkar Bouddha Sanskar Mandal',
     heroSubtitle: 'Preserving Buddhist Values & Dr. Ambedkar\'s Vision',
@@ -98,6 +99,8 @@ const translations = {
     gallery: 'गॅलरी',
     teachings: 'शिकवणी आणि संसाधने',
     contact: 'संपर्क',
+    salagnsanstha: 'सलग्न संस्था',
+    bhante: 'भन्ते',
 
     // Homepage
     heroTitle: 'डॉ. बाबासाहेब आंबेडकर बौद्ध संस्कार मंडळ',

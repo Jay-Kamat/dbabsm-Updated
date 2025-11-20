@@ -65,8 +65,8 @@ const ContactPage: React.FC = () => {
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-2">{t('address')}</h3>
                     <p className="text-gray-600">
-                      Vaishali Boudh Vihar <br /> Lumbini Van, Shirol Road<br />
-                      Jaysingpur 416101<br /> Maharashtra, India
+                      Vaishali Boudh Vihar <br /> Lumbini Van, Dhammanagar,<br />
+                      Shirol Road, Jaysingpur 416101<br /> Maharashtra, India
                     </p>
                   </div>
                 </div>
@@ -127,101 +127,85 @@ const ContactPage: React.FC = () => {
 
             </div>
 
-            {/* Contact Form */}
-            <div>
-              <div className="bg-white p-8 rounded-2xl shadow-lg">
-                <h2 className="text-3xl font-bold text-gray-800 mb-8">{t('sendMessage')}</h2>
+            {/* Contact Form (View Mode) */}
+            <div className="bg-white p-8 rounded-2xl shadow-lg pointer-events-none opacity-90">
+              <h2 className="text-3xl font-bold text-gray-800 mb-8">{t('sendMessage')}</h2>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+              <form className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {language === 'mr' ? 'नाव' : 'Full Name'}
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.name}
+                    readOnly
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50"
+                    placeholder={language === 'mr' ? 'आपले पूर्ण नाव' : 'Your full name'}
+                  />
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {language === 'mr' ? 'नाव' : 'Full Name'}
+                      {language === 'mr' ? 'ईमेल' : 'Email'}
                     </label>
                     <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                      placeholder={language === 'mr' ? 'आपले पूर्ण नाव' : 'Your full name'}
+                      type="email"
+                      value={formData.email}
+                      readOnly
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50"
+                      placeholder={language === 'mr' ? 'आपला ईमेल' : 'Your email'}
                     />
                   </div>
-
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        {language === 'mr' ? 'ईमेल' : 'Email'}
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                        placeholder={language === 'mr' ? 'आपला ईमेल' : 'Your email'}
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        {language === 'mr' ? 'फोन' : 'Phone'}
-                      </label>
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                        placeholder={language === 'mr' ? 'आपला फोन नंबर' : 'Your phone number'}
-                      />
-                    </div>
-                  </div>
-
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {language === 'mr' ? 'विषय' : 'Subject'}
+                      {language === 'mr' ? 'फोन' : 'Phone'}
                     </label>
-                    <select
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all"
-                    >
-                      <option value="">{language === 'mr' ? 'विषय निवडा' : 'Select subject'}</option>
-                      <option value="membership">{language === 'mr' ? 'सदस्यत्व' : 'Membership'}</option>
-                      <option value="events">{language === 'mr' ? 'कार्यक्रम' : 'Events'}</option>
-                      <option value="donation">{language === 'mr' ? 'देणगी' : 'Donation'}</option>
-                      <option value="general">{language === 'mr' ? 'सामान्य चौकशी' : 'General Inquiry'}</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      {language === 'mr' ? 'संदेश' : 'Message'}
-                    </label>
-                    <textarea
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows={6}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all resize-none"
-                      placeholder={language === 'mr' ? 'आपला संदेश इथे लिहा...' : 'Write your message here...'}
+                    <input
+                      type="tel"
+                      value={formData.phone}
+                      readOnly
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50"
+                      placeholder={language === 'mr' ? 'आपला फोन नंबर' : 'Your phone number'}
                     />
                   </div>
+                </div>
 
-                  <button
-                    type="submit"
-                    className="w-full px-6 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift flex items-center justify-center"
-                  >
-                    <Send className="w-5 h-5 mr-2" />
-                    {t('sendMessage')}
-                  </button>
-                </form>
-              </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {language === 'mr' ? 'विषय' : 'Subject'}
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.subject}
+                    readOnly
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50"
+                    placeholder={language === 'mr' ? 'विषय' : 'Subject'}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    {language === 'mr' ? 'संदेश' : 'Message'}
+                  </label>
+                  <textarea
+                    value={formData.message}
+                    readOnly
+                    rows={6}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-gray-50 resize-none"
+                    placeholder={language === 'mr' ? 'आपला संदेश इथे लिहा...' : 'Your message here...'}
+                  />
+                </div>
+
+                <button
+                  type="button"
+                  disabled
+                  className="w-full px-6 py-3 bg-gray-300 text-gray-600 rounded-lg font-medium cursor-not-allowed"
+                >
+                  {t('sendMessage')}
+                </button>
+              </form>
             </div>
           </div>
         </div>

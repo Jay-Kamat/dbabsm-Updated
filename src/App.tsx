@@ -12,6 +12,8 @@ import ActivitiesPage from './pages/ActivitiesPage';
 import ViharPage from './pages/ViharPage';
 import GalleryPage from './pages/GalleryPage';
 import TeachingsPage from './pages/TeachingsPage';
+import SalagnSanstha from './pages/SalagnSanstha';
+import Bhante from './pages/Bhante';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
               <Route path="/vihar" element={<ViharPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/teachings" element={<TeachingsPage />} />
+              <Route path="/salagnsanstha" element={<SalagnSanstha />} />
+              <Route path="/bhante" element={<Bhante />} />
             </Routes>
           </main>
           <Footer />

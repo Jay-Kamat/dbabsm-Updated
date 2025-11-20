@@ -61,8 +61,8 @@ const ActivitiesPage: React.FC = () => {
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-full font-medium transition-colors ${selectedCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-white text-gray-700 hover:bg-orange-50 hover:text-orange-600'
                     }`}
                 >
                   {category.name}
@@ -213,26 +213,18 @@ const ActivitiesPage: React.FC = () => {
         </div>
       )}
 
-      {/* Call to Action */}
-      <section className="py-20 bg-gray-900 text-white">
-        <div className="container mx-auto px-4 text-center">
+      {/* Call to Action - Light Elegant Theme */}
+      {/* Light Call to Action Section (No Image) */}
+      <section className="relative py-20 text-gray-800 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+        <div className="relative container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
             {language === 'mr' ? 'आमच्या क्रियाकलापांमध्ये सहभागी व्हा' : 'Participate in Our Activities'}
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
             {language === 'mr'
               ? 'समुदायिक सेवा, ध्यान सत्र आणि जागरूकता कार्यक्रमांमध्ये सहभागी होऊन सामाजिक बदलाचा भाग बना.'
-              : 'Be part of social change by participating in community service, meditation sessions, and awareness programs.'
-            }
+              : 'Be part of social change by participating in community service, meditation sessions, and awareness programs.'}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3 bg-blue-600 hover:bg-orange-600 text-white rounded-lg font-medium transition-colors hover-lift">
-              {language === 'mr' ? 'स्वयंसेवक बना' : 'Become a Volunteer'}
-            </button>
-            <button className="px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-medium transition-colors hover-lift">
-              {language === 'mr' ? 'संपर्क करा' : 'Contact Us'}
-            </button>
-          </div>
         </div>
       </section>
     </div>

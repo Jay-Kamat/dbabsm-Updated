@@ -80,7 +80,7 @@ const MembersPage: React.FC = () => {
       </section>
 
       {/* Join Us Section */}
-      <section className="py-20 bg-gray-50">
+      {/* <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-800 mb-6">
@@ -102,7 +102,7 @@ const MembersPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };
